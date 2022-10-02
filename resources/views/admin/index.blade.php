@@ -5,7 +5,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-xl-2 col-6">
+            <div class="col-xl-3 col-6">
                 <div class="box overflow-hidden pull-up">
                     <div class="box-body">							
                         <div class="icon bg-primary-light rounded w-60 h-60">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-2 col-6">
+            <div class="col-xl-3 col-6">
                 <div class="box overflow-hidden pull-up">
                     <div class="box-body">							
                         <div class="icon bg-warning-light rounded w-60 h-60">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-2 col-6">
+            <div class="col-xl-3 col-6">
                 <div class="box overflow-hidden pull-up">
                     <div class="box-body">							
                         <div class="icon bg-info-light rounded w-60 h-60">
@@ -44,7 +44,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-2 col-6">
+            <div class="col-xl-3 col-6">
                 <div class="box overflow-hidden pull-up">
                     <div class="box-body">							
                         <div class="icon bg-danger-light rounded w-60 h-60">
@@ -85,7 +85,7 @@
                                         <td class="pl-0 py-8">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0 mr-20">
-                                                    <div class="bg-img h-50 w-50" style="background-image: url(../images/gallery/creative/img-1.jpg)"></div>
+                                                    <div class="bg-img h-50 w-50" style="background-image: url({{asset('backend/images/gallery/creative/img-1.jpg')}})"></div>
                                                 </div>
 
                                                 <div>
@@ -130,7 +130,7 @@
                                         <td class="pl-0 py-8">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0 mr-20">
-                                                    <div class="bg-img h-50 w-50" style="background-image: url(../images/gallery/creative/img-2.jpg)"></div>
+                                                    <div class="bg-img h-50 w-50" style="background-image: url({{asset('backend/images/gallery/creative/img-1.jpg')}})"></div>
                                                 </div>
 
                                                 <div>
@@ -175,7 +175,7 @@
                                         <td class="pl-0 py-8">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0 mr-20">
-                                                    <div class="bg-img h-50 w-50" style="background-image: url(../images/gallery/creative/img-3.jpg)"></div>
+                                                    <div class="bg-img h-50 w-50" style="background-image: url({{asset('backend/images/gallery/creative/img-1.jpg')}})"></div>
                                                 </div>
 
                                                 <div>
@@ -220,7 +220,7 @@
                                         <td class="pl-0 py-8">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0 mr-20">
-                                                    <div class="bg-img h-50 w-50" style="background-image: url(../images/gallery/creative/img-4.jpg)"></div>
+                                                    <div class="bg-img h-50 w-50" style="background-image: url({{asset('backend/images/gallery/creative/img-1.jpg')}})"></div>
                                                 </div>
 
                                                 <div>
@@ -265,7 +265,7 @@
                                         <td class="pl-0 py-8">
                                             <div class="d-flex align-items-center">
                                                 <div class="flex-shrink-0 mr-20">
-                                                    <div class="bg-img h-50 w-50" style="background-image: url(../images/gallery/creative/img-5.jpg)"></div>
+                                                    <div class="bg-img h-50 w-50" style="background-image: url({{asset('backend/images/gallery/creative/img-1.jpg')}})"></div>
                                                 </div>
 
                                                 <div>
