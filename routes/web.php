@@ -41,6 +41,7 @@ Route::post('/update/change/password', [AdminProfileController::class, 'AdminUpd
 
 
 
+//User All Routes
 
 
 
