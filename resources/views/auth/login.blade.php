@@ -61,24 +61,50 @@
         <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
 		    <input type="text" id="name" name="name" class="form-control unicase-form-control text-input"  >
+            {{-- defult error message --}}
+            @error('name')
+                <span class="invaled-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 		</div>
         
         <div class="form-group">
 	    	<label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
 	    	<input type="email" id="email" name="email" class="form-control unicase-form-control text-input" >
+            @error('email')
+                <span class="invaled-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 	  	</div>
         
         <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
 		    <input type="text" id="phone" name="phone" class="form-control unicase-form-control text-input" id="exampleInputEmail1" >
+            @error('phone')
+                <span class="invaled-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 		</div>
         <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Password <span>*</span></label>
 		    <input type="password" id="password" name="password" class="form-control unicase-form-control text-input" >
+            @error('password')
+                <span class="invaled-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 		</div>
          <div class="form-group">
 		    <label class="info-title" for="exampleInputEmail1">Confirm Password <span>*</span></label>
-		    <input type="email" id="password_confirmation" name="password_confirmation" class="form-control unicase-form-control text-input" >
+		    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control unicase-form-control text-input" >
+            @error('password_confirmation')
+                <span class="invaled-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 		</div>
 	  	<button type="submit" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
 	</form>
