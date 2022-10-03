@@ -17,8 +17,8 @@
            <div class="box-body">
              <div class="row">
                <div class="col">
-                   <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data"> {{-- منضيف هي اخر خاصية اذا في صور --}}
-                    @csrf
+                   <form method="post" action="{{ route('admin.profile.store') }}" enctype="multipart/form-data"> 
+                    {{-- منضيف هي اخر خاصية اذا في صور --}}
                      <div class="row">
                        <div class="col-12">	
 
