@@ -1,5 +1,5 @@
 @extends('frontend.main_master')
-@section('contetn')
+@section('content')
 
 
 <div class="body-content outer-top-xs" id="top-banner-and-menu">
