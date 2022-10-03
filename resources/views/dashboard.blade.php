@@ -6,7 +6,7 @@
 		<div class="row">
 
             <div class="col-md-2"><br>
-                <img alt="" class="card-img-top" style="border-radius: 50%" src="{{(!empty($adminData->profile_photo_path))?url('upload/admin_images/'.$adminData->profile_photo_path):url('upload/no_image.jpg')}}" height="100%" width="100%" ><br><br>
+                <img alt="" class="card-img-top" style="border-radius: 50%" src="{{(!empty($user->profile_photo_path))?url('upload/user_images/'.$user->profile_photo_path):url('upload/no_image.jpg')}}" height="100%" width="100%" ><br><br>
 				
                 <ul class="list-group list-group-flush">
                     <a href="" class="btn btn-primary btn-sm btn-block">Home</a>
