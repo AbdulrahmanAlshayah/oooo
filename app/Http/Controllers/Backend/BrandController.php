@@ -9,8 +9,8 @@ use App\Models\Brand;
 class BrandController extends Controller
 {
     public function BrandView(){
-        $brand = Brand::latest()->get();
-        return view('backend.brand.brand_view',compact('brand'));
+        $brands = Brand::latest()->get();
+        return view('backend.brand.brand_view',compact('brands'));
 
 
     }

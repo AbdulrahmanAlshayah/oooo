@@ -15,7 +15,7 @@
           
  
 
-          <div class="col-12">
+          <div class="col-8">
 
            <div class="box">
               <div class="box-header with-border">
@@ -56,6 +56,29 @@
 
                      
           </div>
+
+
+
+
+
+          <div class="col-4">
+
+            <div class="box">
+               <div class="box-header with-border">
+                 <h3 class="box-title">Add Brand</h3>
+               </div>
+               <!-- /.box-header -->
+               <div class="box-body">
+                   <div class="table-responsive">
+                     
+                   </div>
+               </div>
+               <!-- /.box-body -->
+             </div>
+             <!-- /.box -->
+ 
+                      
+           </div>
           <!-- /.col -->
         </div>
         <!-- /.row -->
