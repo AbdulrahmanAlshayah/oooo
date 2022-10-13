@@ -115,4 +115,6 @@ Route::get('/sub/sub/view', [SubCategoryController::class, 'SubSubCategoryView']
 
 Route::get('/subcategory/ajax/{category_id}', [SubCategoryController::class, 'GetSubCategory']);
 
+Route::post('/sub/sub/store', [SubCategoryController::class, 'SubSubCategoryStore'])->name('subsubcategory.store');
+
     });

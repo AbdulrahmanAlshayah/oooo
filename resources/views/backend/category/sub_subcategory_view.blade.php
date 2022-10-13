@@ -76,7 +76,7 @@
 					<div class="table-responsive">
 
 
- <form method="post" action="{{ route('subcategory.store') }}" >
+ <form method="post" action="{{ route('subsubcategory.store') }}" >
 	 	@csrf
 
 
@@ -122,10 +122,10 @@
 
 
 	<div class="form-group">
-		<h5>Sub-SubCategory Hindi  <span class="text-danger">*</span></h5>
+		<h5>Sub-SubCategory Arabic  <span class="text-danger">*</span></h5>
 		<div class="controls">
-	 <input type="text" name="subsubcategory_name_hin" class="form-control" >
-     @error('subsubcategory_name_hin') 
+	 <input type="text" name="subsubcategory_name_ar" class="form-control" >
+     @error('subsubcategory_name_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror 
 	  </div>
