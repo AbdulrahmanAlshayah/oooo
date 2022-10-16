@@ -9,7 +9,9 @@ use App\Models\SubCategory;
 use App\Models\SubSubCategory;
 use App\Models\Brand;
 use App\Models\Product;
+use App\Models\MultiImg;
 use Carbon\Carbon;
+use Image;
 
 class ProductController extends Controller
 {
@@ -31,7 +33,7 @@ class ProductController extends Controller
     	Image::make($image)->resize(917,1000)->save('upload/products/thambnail/'.$name_gen);
     	$save_url = 'upload/products/thambnail/'.$name_gen;
 
-      Product::insert([
+        $product_id = Product::insertGetId([
       	'brand_id' => $request->brand_id,
       	'category_id' => $request->category_id,
       	'subcategory_id' => $request->subcategory_id,
@@ -64,17 +66,41 @@ class ProductController extends Controller
 
       	'product_thambnail' => $save_url,
       	'status' => 1,
-      	'created_at' => Carbon::now(),   	 
+          'created_at' => Carbon::now(),   
 
-
-
-
-
-      ]);
-
-
-	} // end method
-
+        ]);
+  
+  
+        ////////// Multiple Image Upload Start ///////////
+  
+        $images = $request->file('multi_img');
+        foreach ($images as $img) {
+            $make_name = hexdec(uniqid()).'.'.$img->getClientOriginalExtension();
+          Image::make($img)->resize(917,1000)->save('upload/products/multi-image/'.$make_name);
+          $uploadPath = 'upload/products/multi-image/'.$make_name;
+  
+          MultiImg::insert([
+  
+              'product_id' => $product_id,
+              'photo_name' => $uploadPath,
+              'created_at' => Carbon::now(), 
+  
+          ]);
+  
+        }
+  
+        ////////// Een Multiple Image Upload Start ///////////
+  
+  
+         $notification = array(
+              'message' => 'Product Inserted Successfully',
+              'alert-type' => 'success'
+          );
+  
+          return redirect()->back()->with($notification);
+  
+  
+      } // end method
 
 
 
