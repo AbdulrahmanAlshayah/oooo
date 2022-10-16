@@ -66,9 +66,9 @@ class SubCategoryController extends Controller
     	 SubCategory::findOrFail($subcat_id)->update([
 		'category_id' => $request->category_id,
 		'subcategory_name_en' => $request->subcategory_name_en,
-		'subcategory_name_hin' => $request->subcategory_name_hin,
+		'subcategory_name_ar' => $request->subcategory_name_hin,
 		'subcategory_slug_en' => strtolower(str_replace(' ', '-',$request->subcategory_name_en)),
-		'subcategory_slug_hin' => str_replace(' ', '-',$request->subcategory_name_hin),
+		'subcategory_slug_ar' => str_replace(' ', '-',$request->subcategory_name_hin),
 
 
     	]);
