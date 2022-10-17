@@ -143,6 +143,8 @@ Route::post('/image/update', [ProductController::class, 'MultiImageUpdate'])->na
 
 Route::post('/thambnail/update', [ProductController::class, 'ThambnailImageUpdate'])->name('update-product-thambnail');
 
+Route::get('/multiimg/delete/{id}', [ProductController::class, 'MultiImageDelete'])->name('product.multiimg.delete');
+
 });
 
     
