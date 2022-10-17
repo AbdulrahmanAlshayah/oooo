@@ -204,7 +204,31 @@ public function MultiImageUpdate(Request $request){
 } // end mehtod 
 
 
+ /// Product Main Thambnail Update /// 
+ public function ThambnailImageUpdate(Request $request){
+    $pro_id = $request->id;
+    $oldImage = $request->old_img;
+    unlink($oldImage);
 
+   $image = $request->file('product_thambnail');
+       $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+       Image::make($image)->resize(917,1000)->save('upload/products/thambnail/'.$name_gen);
+       $save_url = 'upload/products/thambnail/'.$name_gen;
+
+       Product::findOrFail($pro_id)->update([
+           'product_thambnail' => $save_url,
+           'updated_at' => Carbon::now(),
+
+       ]);
+
+        $notification = array(
+           'message' => 'Product Image Thambnail Updated Successfully',
+           'alert-type' => 'info'
+       );
+
+       return redirect()->back()->with($notification);
+
+    } // end method
 
 
 
