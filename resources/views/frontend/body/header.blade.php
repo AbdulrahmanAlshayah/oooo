@@ -200,9 +200,9 @@
 
    @foreach($subsubcategories as $subsubcategory)
               <ul class="links">
-                <h2 class="title">
-                  @if(session()->get('language') == 'arabic') {{ $subcategory->subcategory_name_ar }} @else {{ $subcategory->subcategory_name_en }} @endif
-                                  </h2>
+                <li><a href="#">
+                  @if(session()->get('language') == 'arabic') {{ $subsubcategory->subsubcategory_name_ar }} @else {{ $subsubcategory->subsubcategory_name_en }} @endif
+                                    </a></li>
 
               </ul>
      @endforeach <!-- // End SubSubCategory Foreach -->
