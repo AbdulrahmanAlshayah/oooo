@@ -6,7 +6,9 @@
         <div class="header-top-inner">
           <div class="cnt-account">
             <ul class="list-unstyled">
-              <li><a href="#"><i class="icon fa fa-user"></i>My Account</a></li>
+              <li><a href="#"><i class="icon fa fa-user"></i>
+                @if(session()->get('language') == 'arabic') حسابك @else My Account @endif
+                            </a></li>
               <li><a href="#"><i class="icon fa fa-heart"></i>Wishlist</a></li>
               <li><a href="#"><i class="icon fa fa-shopping-cart"></i>My Cart</a></li>
               <li><a href="#"><i class="icon fa fa-check"></i>Checkout</a></li>
@@ -38,11 +40,15 @@
                   <li><a href="#">GBP</a></li>
                 </ul>
               </li>
-              <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">English </span><b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">French</a></li>
-                  <li><a href="#">German</a></li>
+              <li class="dropdown dropdown-small"> <a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="value">
+                @if(session()->get('language') == 'arabic') اللغة @else Language @endif
+                  </span><b class="caret"></b></a>
+                              <ul class="dropdown-menu">
+                         @if(session()->get('language') == 'arabic')       
+                        <li><a href="{{ route('english.language') }}">English</a></li>
+                        @else
+                        <li><a href="{{ route('arabic.language') }}">عربي</a></li>
+                         @endif      
                 </ul>
               </li>
             </ul>
