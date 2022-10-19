@@ -127,7 +127,10 @@ class IndexController extends Controller
 		$product_size_ar = explode(',', $size_ar);
 
         $multiImag = MultiImg::where('product_id',$id)->get();
-        return view('frontend.product.product_details',compact('product','multiImag','product_color_en','product_color_ar','product_size_en','product_size_ar'));
+       
+		$cat_id = $product->category_id;
+		$relatedProduct = Product::where('category_id',$cat_id)->where('id','!=',$id)->orderBy('id','DESC')->get();
+	 	return view('frontend.product.product_details',compact('product','multiImag','product_color_en','product_color_ar','product_size_en','product_size_ar','relatedProduct'));
 
 	}
 
