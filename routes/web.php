@@ -249,3 +249,6 @@ Route::get('/cart-remove/{rowId}', [CartPageController::class, 'RemoveCartProduc
 
 Route::get('/cart-increment/{rowId}', [CartPageController::class, 'CartIncrement']);
 
+
+Route::get('/cart-decrement/{rowId}', [CartPageController::class, 'CartDecrement']);
+
