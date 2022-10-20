@@ -40,7 +40,7 @@
 
 
 <br>
- @include('frontend.body.brands')
+ @include('frontend.body.brand')
 </div>
 
 
