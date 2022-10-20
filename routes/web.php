@@ -237,15 +237,13 @@ Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'Use
 
     Route::get('/wishlist-remove/{id}', [WishlistController::class, 'RemoveWishlistProduct']);
 
-    Route::get('/mycart', [CartPageController::class, 'MyCart'])->name('mycart');
-
-    Route::get('/get-cart-product', [CartPageController::class, 'GetCartProduct']);
-
-    Route::get('/cart-remove/{rowId}', [CartPageController::class, 'RemoveCartProduct']);
-
 
 
 });
 
+Route::get('/mycart', [CartPageController::class, 'MyCart'])->name('mycart');
 
+Route::get('/get-cart-product', [CartPageController::class, 'GetCartProduct']);
+
+Route::get('/cart-remove/{rowId}', [CartPageController::class, 'RemoveCartProduct']);
 
