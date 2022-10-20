@@ -95,7 +95,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><strong><span id="pname"></span> </strong></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModel">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -256,6 +256,7 @@ function productView(id){
             },
             url: "/cart/data/store/"+id,
             success:function(data){
+              $('#closeModel').click();
                 console.log(data)
             }
         })
