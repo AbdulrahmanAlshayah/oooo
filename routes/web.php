@@ -219,3 +219,6 @@ Route::get('/product/mini/cart/', [CartController::class, 'AddMiniCart']);
 
 // Remove mini cart
 Route::get('/minicart/product-remove/{rowId}', [CartController::class, 'RemoveMiniCart']);
+
+// Add to Wishlist
+Route::post('/add-to-wishlist/{product_id}', [CartController::class, 'AddToWishlist']);
