@@ -160,7 +160,7 @@
 
 <input type="hidden" id="product_id">
 
-<button type="submit" class="btn btn-primary mb-2">Add to Cart</button>
+<button type="submit" class="btn btn-primary mb-2" onclick="addToCart()">Add to Cart</button>
 
 
         </div><!-- // end col md -->
