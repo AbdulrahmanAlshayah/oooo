@@ -489,7 +489,7 @@ wishlist();
   function cart(){
      $.ajax({
          type: 'GET',
-         url: '/user/get-cart-product',
+         url: '/get-cart-product',
          dataType:'json',
          success:function(response){
  var rows = ""
@@ -542,7 +542,7 @@ cart();
  function cartRemove(id){
      $.ajax({
          type: 'GET',
-         url: '/user/cart-remove/'+id,
+         url: '/cart-remove/'+id,
          dataType:'json',
          success:function(data){
           cart();
@@ -603,7 +603,7 @@ function cartIncrement(rowId){
     }
  // ---------- END CART Decrement -----///
 
- 
+
 </script>  
 
 <!-- //End Load My cart / -->
