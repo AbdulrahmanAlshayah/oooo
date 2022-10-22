@@ -253,3 +253,13 @@ Route::get('/cart-increment/{rowId}', [CartPageController::class, 'CartIncrement
 
 Route::get('/cart-decrement/{rowId}', [CartPageController::class, 'CartDecrement']);
 
+
+
+// Admin Coupons All Routes 
+
+Route::prefix('coupons')->group(function(){
+
+    Route::get('/view', [CouponController::class, 'CouponView'])->name('manage-coupon');
+    
+    
+    });
