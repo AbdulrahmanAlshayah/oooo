@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Backend\CouponController;
 
 use App\Http\Controllers\User\WishlistController;
 use App\Http\Controllers\User\CartPageController;
