@@ -187,41 +187,79 @@ public function DistrictUpdate(Request $request,$id){
     }
 
 
-    public function StateStore(Request $request){
+        public function StateStore(Request $request){
 
-    	$request->validate([
-    		'division_id' => 'required',  
-    		'district_id' => 'required', 
-    		'state_name' => 'required', 	 
+            $request->validate([
+                'division_id' => 'required',  
+                'district_id' => 'required', 
+                'state_name' => 'required', 	 
 
-    	]);
-
-
-	ShipState::insert([
-
-		'division_id' => $request->division_id,
-		'district_id' => $request->district_id,
-		'state_name' => $request->state_name,
-		'created_at' => Carbon::now(),
-
-    	]);
-
-	    $notification = array(
-			'message' => 'State Inserted Successfully',
-			'alert-type' => 'success'
-		);
-
-		return redirect()->back()->with($notification);
-
-    } // end method 
+            ]);
 
 
-public function StateEdit($id){
-    $division = ShipDivision::orderBy('division_name','ASC')->get();
-    $district = ShipDistrict::orderBy('district_name','ASC')->get();
-    $state = ShipState::findOrFail($id);
-		return view('backend.ship.state.edit_state',compact('division','district','state'));
-    }
+        ShipState::insert([
+
+            'division_id' => $request->division_id,
+            'district_id' => $request->district_id,
+            'state_name' => $request->state_name,
+            'created_at' => Carbon::now(),
+
+            ]);
+
+            $notification = array(
+                'message' => 'State Inserted Successfully',
+                'alert-type' => 'success'
+            );
+
+            return redirect()->back()->with($notification);
+
+        } // end method 
+
+
+        public function StateEdit($id){
+            $division = ShipDivision::orderBy('division_name','ASC')->get();
+            $district = ShipDistrict::orderBy('district_name','ASC')->get();
+            $state = ShipState::findOrFail($id);
+                return view('backend.ship.state.edit_state',compact('division','district','state'));
+            }
+
+
+
+
+        public function StateUpdate(Request $request,$id){
+
+            ShipState::findOrFail($id)->update([
+
+            'division_id' => $request->division_id,
+            'district_id' => $request->district_id,
+            'state_name' => $request->state_name,
+            'created_at' => Carbon::now(),
+
+            ]);
+
+            $notification = array(
+                'message' => 'State Updated Successfully',
+                'alert-type' => 'info'
+            );
+
+            return redirect()->route('manage-state')->with($notification);
+
+
+        } // end mehtod 
+
+
+        public function StateDelete($id){
+
+            ShipState::findOrFail($id)->delete();
+
+            $notification = array(
+                'message' => 'State Deleted Successfully',
+                'alert-type' => 'info'
+            );
+
+            return redirect()->back()->with($notification);
+
+        } // end method 
 
 
 
