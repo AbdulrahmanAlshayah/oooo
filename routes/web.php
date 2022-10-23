@@ -276,7 +276,7 @@ Route::prefix('coupons')->group(function(){
 // Admin Shipping All Routes 
 
 Route::prefix('shipping')->group(function(){
-
+    // Ship Division
     Route::get('/division/view', [ShippingAreaController::class, 'DivisionView'])->name('manage-division');
     
     Route::post('/division/store', [ShippingAreaController::class, 'DivisionStore'])->name('division.store');
@@ -286,5 +286,22 @@ Route::prefix('shipping')->group(function(){
     Route::post('/division/update/{id}', [ShippingAreaController::class, 'DivisionUpdate'])->name('division.update');
 
     Route::get('/division/delete/{id}', [ShippingAreaController::class, 'DivisionDelete'])->name('division.delete');
+
+
+
+
+
+// Ship District 
+Route::get('/district/view', [ShippingAreaController::class, 'DistrictView'])->name('manage-district');
+
+Route::post('/division/store', [ShippingAreaController::class, 'DivisionStore'])->name('division.store');
+
+Route::get('/division/edit/{id}', [ShippingAreaController::class, 'DivisionEdit'])->name('division.edit');
+
+Route::post('/division/update/{id}', [ShippingAreaController::class, 'DivisionUpdate'])->name('division.update');
+
+Route::get('/division/delete/{id}', [ShippingAreaController::class, 'DivisionDelete'])->name('division.delete');
+
+
     
     });
