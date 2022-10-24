@@ -324,3 +324,5 @@ Route::get('/state/delete/{id}', [ShippingAreaController::class, 'StateDelete'])
 Route::post('/coupon-apply', [CartController::class, 'CouponApply']);
 
 Route::get('/coupon-calculation', [CartController::class, 'CouponCalculation']);
+
+Route::get('/coupon-remove', [CartController::class, 'CouponRemove']);
