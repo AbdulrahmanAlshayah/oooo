@@ -52,58 +52,68 @@ class CartController extends Controller
     } // end mehtod 
 
   // Mini Cart Section
-  public function AddMiniCart(){
+        public function AddMiniCart(){
 
-    $carts = Cart::content();
-    $cartQty = Cart::count();
-    $cartTotal = Cart::total();
+            $carts = Cart::content();
+            $cartQty = Cart::count();
+            $cartTotal = Cart::total();
 
-    return response()->json(array(
-        'carts' => $carts,
-        'cartQty' => $cartQty,
-        'cartTotal' => round($cartTotal),
+            return response()->json(array(
+                'carts' => $carts,
+                'cartQty' => $cartQty,
+                'cartTotal' => round($cartTotal),
 
-    ));
-} // end method 
+            ));
+        } // end method 
 
-/// remove mini cart 
-public function RemoveMiniCart($rowId){
-    Cart::remove($rowId);
-    return response()->json(['success' => 'Product Remove from Cart']);
+        /// remove mini cart 
+        public function RemoveMiniCart($rowId){
+            Cart::remove($rowId);
+            return response()->json(['success' => 'Product Remove from Cart']);
 
-} // end mehtod 
+        } // end mehtod 
 
-  // add to wishlist mehtod 
+        // add to wishlist mehtod 
 
-  public function AddToWishlist(Request $request, $product_id){
-    if (Auth::check()) {
+        public function AddToWishlist(Request $request, $product_id){
+            if (Auth::check()) {
 
-        $exists = Wishlist::where('user_id',Auth::id())->where('product_id',$product_id)->first();
+                $exists = Wishlist::where('user_id',Auth::id())->where('product_id',$product_id)->first();
 
-        if (!$exists) {
-            Wishlist::insert([
-            'user_id' => Auth::id(), 
-            'product_id' => $product_id, 
-            'created_at' => Carbon::now(), 
-        ]);
-       return response()->json(['success' => 'Successfully Added On Your Wishlist']);
-    }else{
+                if (!$exists) {
+                    Wishlist::insert([
+                    'user_id' => Auth::id(), 
+                    'product_id' => $product_id, 
+                    'created_at' => Carbon::now(), 
+                ]);
+            return response()->json(['success' => 'Successfully Added On Your Wishlist']);
+            }else{
 
-        return response()->json(['error' => 'This Product has Already on Your Wishlist']);
+                return response()->json(['error' => 'This Product has Already on Your Wishlist']);
 
-    }    
+            }    
 
-    }else{
+            }else{
 
-        return response()->json(['error' => 'At First Login Your Account']);
+                return response()->json(['error' => 'At First Login Your Account']);
 
-    }
+            }
 
-} // end method 
-
-
+        } // end method 
 
 
+
+
+
+        public function CouponApply(Request $request){
+
+        }
+    
+    
+    
+    
+    
+    
 
 
 

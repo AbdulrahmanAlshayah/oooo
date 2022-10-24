@@ -314,8 +314,12 @@ Route::post('/state/update/{id}', [ShippingAreaController::class, 'StateUpdate']
 
 Route::get('/state/delete/{id}', [ShippingAreaController::class, 'StateDelete'])->name('state.delete');
 
+});
 
 
 
-    
-    });
+
+// Frontend Coupon Option
+
+Route::post('/coupon-apply', [CartController::class, 'CouponApply']);
+

@@ -181,8 +181,8 @@ public function DistrictUpdate(Request $request,$id){
 
  public function StateView(){
     $division = ShipDivision::orderBy('division_name','ASC')->get();
-    $district = ShipDistrict::with('division','district')->orderBy('district_name','ASC')->get();
-    $state = ShipState::orderBy('id','DESC')->get();
+    $district = ShipDistrict::orderBy('district_name','ASC')->get();
+    $state = ShipState::with('division','district')->orderBy('id','DESC')->get();
 		return view('backend.ship.state.view_state',compact('division','district','state'));
     }
 
