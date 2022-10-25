@@ -545,8 +545,11 @@ cart();
          url: '/cart-remove/'+id,
          dataType:'json',
          success:function(data){
+          couponCalculation();
           cart();
             miniCart();
+            $('#couponField').show();
+            $('#coupon_name').val('');
           // Start Message 
              const Toast = Swal.mixin({
                    toast: true,
