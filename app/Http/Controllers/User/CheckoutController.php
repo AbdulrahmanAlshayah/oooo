@@ -26,5 +26,7 @@ class CheckoutController extends Controller
     } // end method 
 
 
+    public function CheckoutStore(Request $request){
 
+    }// end mehtod. 
 }
