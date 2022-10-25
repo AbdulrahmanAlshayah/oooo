@@ -71,7 +71,7 @@ My Checkout
                  </div>  <!-- // end form group  -->
            
            
-               </form>
+               
                            </div>
 				<!-- guest-login -->
 
