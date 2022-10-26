@@ -246,6 +246,8 @@ Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'Use
 
     Route::get('/my/orders', [AllUserController::class, 'MyOrders'])->name('my.orders');
 
+    Route::get('/order_details/{order_id}', [AllUserController::class, 'OrderDetails']);
+
 
 });
 
