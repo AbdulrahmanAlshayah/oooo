@@ -245,12 +245,14 @@ Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'Use
     Route::get('/wishlist-remove/{id}', [WishlistController::class, 'RemoveWishlistProduct']);
 
     Route::post('/stripe/order', [StripeController::class, 'StripeOrder'])->name('stripe.order');
-    
+
     Route::post('/cash/order', [CashController::class, 'CashOrder'])->name('cash.order');
 
     Route::get('/my/orders', [AllUserController::class, 'MyOrders'])->name('my.orders');
 
     Route::get('/order_details/{order_id}', [AllUserController::class, 'OrderDetails']);
+
+    Route::get('/invoice_download/{order_id}', [AllUserController::class, 'InvoiceDownload']);
 
 
 });
