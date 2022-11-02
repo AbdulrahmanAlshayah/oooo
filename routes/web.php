@@ -416,3 +416,14 @@ Route::prefix('alluser')->group(function(){
     
     
     });
+
+
+
+// Admin Reports Routes 
+Route::prefix('blog')->group(function(){
+
+    Route::get('/category', [BlogController::class, 'BlogCategory'])->name('blog.category');
+    
+    
+    
+    });
