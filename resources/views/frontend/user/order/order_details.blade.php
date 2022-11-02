@@ -228,6 +228,12 @@
 
               @else
 
+              @php 
+              $order = App\Models\Order::where('id',$order->id)->where('return_reason','=',NULL)->first();
+              @endphp
+        
+        
+              @if($order)
               <form action="{{ route('return.order',$order->id) }}" method="post">
                 @csrf
 
@@ -239,6 +245,14 @@
           <button type="submit" class="btn btn-danger">Submit</button>
 
 </form>
+
+@else
+
+<span class="badge badge-pill badge-warning" style="background: red">You Have send return request for this product</span>
+
+@endif 
+
+
 
   @endif
 <br><br>
