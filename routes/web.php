@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeBlogController;
+use App\Http\Controllers\Backend\SiteSettingController;
 
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
@@ -421,7 +422,7 @@ Route::prefix('alluser')->group(function(){
 
 
 
-// Admin Reports Routes 
+// Admin Blog Routes 
 Route::prefix('blog')->group(function(){
 
     Route::get('/category', [BlogController::class, 'BlogCategory'])->name('blog.category');
@@ -454,3 +455,14 @@ Route::get('/blog', [HomeBlogController::class, 'AddBlogPost'])->name('home.blog
 Route::get('/post/details/{id}', [HomeBlogController::class, 'DetailsBlogPost'])->name('post.details');
 
 Route::get('/blog/category/post/{category_id}', [HomeBlogController::class, 'HomeBlogCatPost']);
+
+
+
+// Admin Site Setting Routes 
+Route::prefix('setting')->group(function(){
+
+    Route::get('/site', [SiteSettingController::class, 'SiteSetting'])->name('site.setting');
+    
+    
+    
+    });
