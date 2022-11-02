@@ -39,7 +39,7 @@
                     <td><span><i class="{{$item->category_icon}}"></i></span></td>
                     <td>{{$item->category_name_en}}</td>
                     <td>{{$item->category_name_ar}}<td>
-                        <a href="{{ route('category.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i></a>
+                        <a href="{{ route('blog.category.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i></a>
                         <a href="{{ route('category.delete',$item->id) }}" class="btn btn-danger" title="Delete Data" id="delete"><i class="fa fa-trash"></i></a>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
                      
                     {{-- coped this form from admin_change_password.blade.php --}}
 
-                    <form method="post" action="{{ route('category.store') }}"> {{--  منضيف هي اخر خاصية اذا في صور --}}
+                    <form method="post" action="{{ route('blogcategory.store') }}"> {{--  منضيف هي اخر خاصية اذا في صور --}}
                         @csrf
                          
                                     <div class="form-group">
