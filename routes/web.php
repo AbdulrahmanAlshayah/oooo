@@ -11,6 +11,8 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\Frontend\HomeBlogController;
+
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
 use App\Http\Controllers\Backend\OrderController;
@@ -439,3 +441,12 @@ Route::prefix('blog')->group(function(){
     Route::post('/post/store', [BlogController::class, 'BlogPostStore'])->name('post-store');
     
     });
+
+
+
+//  Frontend Blog Show Routes 
+
+
+
+
+Route::get('/blog', [HomeBlogController::class, 'AddBlogPost'])->name('home.blog');
