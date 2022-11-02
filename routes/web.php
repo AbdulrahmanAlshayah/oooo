@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\LanguageController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeBlogController;
 use App\Http\Controllers\Backend\SiteSettingController;
+use App\Http\Controllers\Backend\ReturnController;
 
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
@@ -468,5 +469,14 @@ Route::prefix('setting')->group(function(){
     Route::get('/seo', [SiteSettingController::class, 'SeoSetting'])->name('seo.setting'); 
     
     Route::post('/seo/update', [SiteSettingController::class, 'SeoSettingUpdate'])->name('update.seosetting');
+    
+    });
+
+
+
+// Admin Return Order Routes 
+Route::prefix('return')->group(function(){
+
+    Route::get('/admin/request', [ReturnController::class, 'ReturnRequest'])->name('return.request');
     
     });
