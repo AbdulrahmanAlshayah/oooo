@@ -35,7 +35,10 @@ Blog Page
 <span class="date-time"> {{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
 
 <p>@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 200 )  !!} @else {!! Str::limit($blog->post_details_en, 200 )  !!} @endif</p>
-	<a href="#" class="btn btn-upper btn-primary read-more">read more</a>
+	
+
+<a href="{{ route('post.details',$blog->id) }}" class="btn btn-upper btn-primary read-more">read more</a>
+
 </div>
 @endforeach
 

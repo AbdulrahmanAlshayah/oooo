@@ -450,3 +450,5 @@ Route::prefix('blog')->group(function(){
 
 
 Route::get('/blog', [HomeBlogController::class, 'AddBlogPost'])->name('home.blog');
+
+Route::get('/post/details/{id}', [HomeBlogController::class, 'DetailsBlogPost'])->name('post.details');
