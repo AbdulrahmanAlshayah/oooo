@@ -2,7 +2,7 @@
 @section('content')
 
 @section('title')
-Blog Page 
+Blog Category Page 
 @endsection
 
 
@@ -24,23 +24,26 @@ Blog Page
 		<div class="row">
 			<div class="blog-page">
 				<div class="col-md-9">
-					<div class="blog-post  wow fadeInUp">
+
 
 
 				@foreach($blogpost as $blog)
-                <div class="blog-post  wow fadeInUp">
-<a href="blog-details.html"><img class="img-responsive" src="{{ asset($blog->post_image) }}" alt=""></a>
-<h1><a href="blog-details.html"> @if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h1>
+					<div class="blog-post  wow fadeInUp">
+	<a href="blog-details.html"><img class="img-responsive" src="{{ asset($blog->post_image) }}" alt=""></a>
 
-<span class="date-time"> {{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
+	<h1><a href="blog-details.html"> @if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h1>
 
-<p>@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 200 )  !!} @else {!! Str::limit($blog->post_details_en, 200 )  !!} @endif</p>
-	
+	<span class="date-time"> {{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
 
-<a href="{{ route('post.details',$blog->id) }}" class="btn btn-upper btn-primary read-more">read more</a>
+	<p>@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 200 )  !!} @else {!! Str::limit($blog->post_details_en, 200 )  !!} @endif</p>
+
+
+	<a href="{{ route('post.details',$blog->id) }}" class="btn btn-upper btn-primary read-more">read more</a>
+
 
 </div>
-@endforeach
+ @endforeach
+
 
 <div class="clearfix blog-pagination filters-container  wow fadeInUp" style="padding:0px; background:none; box-shadow:none; margin-top:15px; border:none">
 
@@ -72,27 +75,32 @@ Blog Page
 </div>		
 
 <div class="home-banner outer-top-n outer-bottom-xs">
-<img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }}" alt="Image">
+<img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }} " alt="Image">
 </div>
-				<!-- ==============================================CATEGORY============================================== -->
+				<!-- ======== ====CATEGORY======= === -->
 <div class="sidebar-widget outer-bottom-xs wow fadeInUp">
 	<h3 class="section-title">Blog Category</h3>
 	<div class="sidebar-widget-body m-t-10">
 		<div class="accordion">
-	    	
-            @foreach($blogcategory as $category)
+
+@foreach($blogcategory as $category)
 	    	 <ul class="list-group">
-                <a href="{{ url('blog/category/post/'.$category->id) }}"><li class="list-group-item">@if(session()->get('language') == 'hindi') {{ $category->blog_category_name_hin }} @else {{ $category->blog_category_name_en }} @endif</li></a>
-                
+  <a href="{{ url('blog/category/post/'.$category->id) }}"><li class="list-group-item">@if(session()->get('language') == 'hindi') {{ $category->blog_category_name_hin }} @else {{ $category->blog_category_name_en }} @endif</li></a>
+
    </ul>
 @endforeach
 
-            </div><!-- /.accordion -->
-        </div><!-- /.sidebar-widget-body -->
-    </div><!-- /.sidebar-widget -->
-<!-- ===== ======== CATEGORY : END ==== = -->	
 
-						<!-- ============================== PRODUCT TAGS ================== -->
+
+	    </div><!-- /.accordion -->
+	</div><!-- /.sidebar-widget-body -->
+</div><!-- /.sidebar-widget -->
+	<!-- ===== ======== CATEGORY : END ==== = -->	
+
+
+
+
+ <!-- === ======== PRODUCT TAGS ==== ========== -->
 <div class="sidebar-widget product-tag wow fadeInUp">
 	<h3 class="section-title">Product tags</h3>
 	<div class="sidebar-widget-body outer-top-xs">
