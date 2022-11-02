@@ -1,4 +1,4 @@
-resources/views/backend/orders/pending_orders_details.blade.php@extends('admin.admin_master')
+@extends('admin.admin_master')
 @section('admin')
 
 
