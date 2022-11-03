@@ -87,4 +87,14 @@ class AllUserController extends Controller
 
 
 
+    ///////////// Order Traking ///////
+
+    public function OrderTraking(){
+
+    } // end mehtod 
+
+
+
+
+
 }

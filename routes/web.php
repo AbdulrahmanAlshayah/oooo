@@ -240,7 +240,7 @@ Route::get('/minicart/product-remove/{rowId}', [CartController::class, 'RemoveMi
 // Add to Wishlist
 Route::post('/add-to-wishlist/{product_id}', [CartController::class, 'AddToWishlist']);
 
-
+///////////////////// User Must Login ////
 Route::group(['prefix'=>'user','middleware' => ['user','auth'],'namespace'=>'User'],function(){
 
     // Wishlist page
@@ -398,6 +398,9 @@ Route::prefix('orders')->group(function(){
 
     Route::get('/cancel/orders', [AllUserController::class, 'CancelOrders'])->name('cancel.orders');
 
+    /// Order Traking Route 
+    Route::get('/order/tracking', [AllUserController::class, 'OrderTraking'])->name('order.tracking');    
+
     });
 
     // Admin Reports Routes 
@@ -532,7 +535,7 @@ Route::prefix('adminuserrole')->group(function(){
     Route::get('/edit/{id}', [AdminUserController::class, 'EditAdminRole'])->name('edit.admin.user');
 
     Route::post('/update', [AdminUserController::class, 'UpdateAdminRole'])->name('admin.user.update');
-    
+
     Route::get('/delete/{id}', [AdminUserController::class, 'DeleteAdminRole'])->name('delete.admin.user');
     
     });
