@@ -480,6 +480,19 @@ Route::post('/review/store', [ReviewController::class, 'ReviewStore'])->name('re
 
 
 
+// Admin Manage Review Routes 
+Route::prefix('review')->group(function(){
+
+    Route::get('/pending', [ReviewController::class, 'PendingReview'])->name('pending.review');
+    
+    Route::get('/admin/approve/{id}', [ReviewController::class, 'ReviewApprove'])->name('review.approve');
+    
+    Route::get('/admin/all/request', [ReturnController::class, 'ReturnAllRequest'])->name('all.request');
+    
+    });
+
+
+
 // Admin Return Order Routes 
 Route::prefix('return')->group(function(){
 
