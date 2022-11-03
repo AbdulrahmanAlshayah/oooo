@@ -500,6 +500,8 @@ Route::prefix('return')->group(function(){
 
     Route::get('/admin/return/approve/{order_id}', [ReturnController::class, 'ReturnRequestApprove'])->name('return.approve');
 
-    Route::get('/admin/all/request', [ReturnController::class, 'ReturnAllRequest'])->name('all.request');
+    Route::get('/publish', [ReviewController::class, 'PublishReview'])->name('publish.review');
+
+    Route::get('/delete/{id}', [ReviewController::class, 'DeleteReview'])->name('delete.review');
     
     });
