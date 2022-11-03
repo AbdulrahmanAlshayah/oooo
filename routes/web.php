@@ -14,6 +14,7 @@ use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\HomeBlogController;
 use App\Http\Controllers\Backend\SiteSettingController;
 use App\Http\Controllers\Backend\ReturnController;
+use App\Http\Controllers\Backend\AdminUserController;
 
 use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\ShippingAreaController;
@@ -508,10 +509,21 @@ Route::prefix('return')->group(function(){
 
 
 
-// Admin Manage Review Routes 
+// Admin Manage Stock Routes 
 Route::prefix('stock')->group(function(){
 
     Route::get('/product', [ProductController::class, 'ProductStock'])->name('product.stock');
+    
+    
+    });
+
+
+
+
+// Admin User Role Routes 
+Route::prefix('adminuserrole')->group(function(){
+
+    Route::get('/all', [AdminUserController::class, 'AllAdminRole'])->name('all.admin.user');
     
     
     });
