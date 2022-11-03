@@ -474,6 +474,11 @@ Route::prefix('setting')->group(function(){
     });
 
 
+/// Frontend Product Review Routes
+
+Route::post('/review/store', [ReviewController::class, 'ReviewStore'])->name('review.store');
+
+
 
 // Admin Return Order Routes 
 Route::prefix('return')->group(function(){
