@@ -192,6 +192,9 @@ class IndexController extends Controller
 
  // Product Seach 
     public function ProductSearch(Request $request){
+        
+        $request->validate(["search" => "required"]);
+
         $item = $request->search;
         // echo "$item";
         $categories = Category::orderBy('category_name_en','ASC')->get();
