@@ -24,20 +24,20 @@ class BlogController extends Controller
 
         $request->validate([
              'blog_category_name_en' => 'required',
-             'blog_category_name_hin' => 'required',
+             'blog_category_name_ar' => 'required',
  
          ],[
              'blog_category_name_en.required' => 'Input Blog Category English Name',
-             'blog_category_name_hin.required' => 'Input Blog Category Hindi Name',
+             'blog_category_name_ar.required' => 'Input Blog Category Hindi Name',
          ]);
  
  
  
      BlogPostCategory::insert([
          'blog_category_name_en' => $request->blog_category_name_en,
-         'blog_category_name_hin' => $request->blog_category_name_hin,
+         'blog_category_name_ar' => $request->blog_category_name_ar,
          'blog_category_slug_en' => strtolower(str_replace(' ', '-',$request->blog_category_name_en)),
-         'blog_category_slug_hin' => str_replace(' ', '-',$request->blog_category_name_hin),
+         'blog_category_slug_ar' => str_replace(' ', '-',$request->blog_category_name_ar),
          'created_at' => Carbon::now(),
  
  
@@ -70,9 +70,9 @@ class BlogController extends Controller
  
      BlogPostCategory::findOrFail($blogcar_id)->update([
          'blog_category_name_en' => $request->blog_category_name_en,
-         'blog_category_name_hin' => $request->blog_category_name_hin,
+         'blog_category_name_ar' => $request->blog_category_name_ar,
          'blog_category_slug_en' => strtolower(str_replace(' ', '-',$request->blog_category_name_en)),
-         'blog_category_slug_hin' => str_replace(' ', '-',$request->blog_category_name_hin),
+         'blog_category_slug_ar' => str_replace(' ', '-',$request->blog_category_name_ar),
          'created_at' => Carbon::now(),
  
  
@@ -109,11 +109,11 @@ class BlogController extends Controller
 
   	$request->validate([
     		'post_title_en' => 'required',
-    		'post_title_hin' => 'required',
+    		'post_title_ar' => 'required',
     		'post_image' => 'required',
     	],[
     		'post_title_en.required' => 'Input Post Title English Name',
-    		'post_title_hin.required' => 'Input Post Title Hindi Name',
+    		'post_title_ar.required' => 'Input Post Title Hindi Name',
     	]);
 
     	$image = $request->file('post_image');
@@ -124,12 +124,12 @@ class BlogController extends Controller
 	BlogPost::insert([
 		'category_id' => $request->category_id,
 		'post_title_en' => $request->post_title_en,
-		'post_title_hin' => $request->post_title_hin,
+		'post_title_ar' => $request->post_title_ar,
 		'post_slug_en' => strtolower(str_replace(' ', '-',$request->post_title_en)),
-		'post_slug_hin' => str_replace(' ', '-',$request->post_title_hin),
+		'post_slug_ar' => str_replace(' ', '-',$request->post_title_ar),
 		'post_image' => $save_url,
 		'post_details_en' => $request->post_details_en,
-		'post_details_hin' => $request->post_details_hin,
+		'post_details_ar' => $request->post_details_ar,
         'created_at' => Carbon::now(),
 
     	]);

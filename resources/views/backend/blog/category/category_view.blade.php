@@ -28,7 +28,7 @@
 							<tr>
 
 								<th>Blog Category En</th>
-								<th>Blog Category Hin </th>
+								<th>Blog Category Ar </th>
 								<th>Action</th>
 
 							</tr>
@@ -38,7 +38,7 @@
 	 <tr>
 
 		<td>{{ $item->blog_category_name_en }}</td>
-		 <td>{{ $item->blog_category_name_hin }}</td>
+		 <td>{{ $item->blog_category_name_ar }}</td>
 		<td>
  <a href="{{ route('category.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
  <a href="{{ route('category.delete',$item->id) }}" class="btn btn-danger" title="Delete Data" id="delete">
@@ -91,10 +91,10 @@
 
 
 	<div class="form-group">
-		<h5>Blog Category Hindi <span class="text-danger">*</span></h5>
+		<h5>Blog Category Arabic <span class="text-danger">*</span></h5>
 		<div class="controls">
-	 <input type="text" name="blog_category_name_hin" class="form-control" >
-     @error('blog_category_name_hin') 
+	 <input type="text" name="blog_category_name_ar" class="form-control" >
+     @error('blog_category_name_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror 
 	  </div>

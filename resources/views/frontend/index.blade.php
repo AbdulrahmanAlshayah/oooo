@@ -1178,12 +1178,12 @@ $discount = ($amount/$product->selling_price) * 100;
                   <!-- /.blog-post-image -->
 
                   <div class="blog-post-info text-left">
-                    <h3 class="name"><a href="#">@if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h3>
+                    <h3 class="name"><a href="#">@if(session()->get('language') == 'arabic') {{ $blog->post_title_ar }} @else {{ $blog->post_title_en }} @endif</a></h3>
 
 
                     <span class="info">{{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
 
-                    <p class="text">@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
+                    <p class="text">@if(session()->get('language') == 'arabic') {!! Str::limit($blog->post_details_ar, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
 
 
                     <a href="{{ route('post.details',$blog->id) }}" class="lnk btn btn-primary">Read more</a> </div>

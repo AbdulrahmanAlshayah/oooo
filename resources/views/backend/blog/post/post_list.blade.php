@@ -31,7 +31,7 @@
 								<th>Post Category  </th>
 								<th>Post Image </th>
 								<th>Post Title En </th>
-								<th>Post Title Hin </th>
+								<th>Post Title Ar </th>
 								<th>Action</th>
 
 							</tr>
@@ -43,7 +43,7 @@
 		 <td>{{ $item->category->blog_category_name_en }}</td>
 		 <td> <img src="{{ asset($item->post_image) }}" style="width: 60px; height: 60px;"> </td>
 		<td>{{ $item->post_title_en }}</td>
-		 <td>{{ $item->post_title_hin }}</td>
+		 <td>{{ $item->post_title_ar }}</td>
 		<td width="20%">
  <a href="{{ route('blog.category.edit',$item->id) }}" class="btn btn-info" title="Edit Data"><i class="fa fa-pencil"></i> </a>
  <a href="{{ route('category.delete',$item->id) }}" class="btn btn-danger" title="Delete Data" id="delete">

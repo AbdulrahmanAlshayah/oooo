@@ -52,10 +52,10 @@
 			<div class="col-md-6">
 
 				 <div class="form-group">
-			<h5>Post Title Hin <span class="text-danger">*</span></h5>
+			<h5>Post Title Ar <span class="text-danger">*</span></h5>
 			<div class="controls">
-				<input type="text" name="post_title_hin" class="form-control" required="">
-     @error('post_title_hin') 
+				<input type="text" name="post_title_ar" class="form-control" required="">
+     @error('post_title_ar') 
 	 <span class="text-danger">{{ $message }}</span>
 	 @enderror
 	 		 </div>
@@ -137,10 +137,10 @@
 			<div class="col-md-6">
 
 	     <div class="form-group">
-			<h5>Post Details Hindi <span class="text-danger">*</span></h5>
+			<h5>Post Details Arabic <span class="text-danger">*</span></h5>
 			<div class="controls">
-	<textarea id="editor2" name="post_details_hin" rows="10" cols="80">
-		Post Details Hindi
+	<textarea id="editor2" name="post_details_ar" rows="10" cols="80">
+		Post Details Arabic
 						</textarea>       
 	 		 </div>
 		</div>
