@@ -3,26 +3,27 @@
 @section('title')
 Home Easy Online Shop
 @endsection
+
+
+
 <div class="body-content outer-top-xs" id="top-banner-and-menu">
   <div class="container">
     <div class="row"> 
       <!-- ============================================== SIDEBAR ============================================== -->
       <div class="col-xs-12 col-sm-12 col-md-3 sidebar"> 
         
-        <!-- ================================== TOP NAVIGATION ================================== -->
-        @include('frontend.common.vertical_menu')
-        <!-- ================================== TOP NAVIGATION : END ================================== --> 
-        
-        
-        <!-- ========================== HOT DEALS ===================================== -->
-     
 
 
+
+
+        <!-- === == TOP NAVIGATION == ==== -->
+       @include('frontend.common.vertical_menu')
+        <!-- ===== ==== TOP NAVIGATION : END ==== ===== --> 
+        
+        
+        <!-- === ===== HOT DEALS ======= ===== -->
         @include('frontend.common.hot_deals')
-
-
-
-        <!-- ========================= HOT DEALS: END ======================== --> 
+        <!-- === === HOT DEALS: END ====== ===== --> 
         
         <!-- ============================================== SPECIAL OFFER ============================================== -->
         
@@ -30,7 +31,7 @@ Home Easy Online Shop
           <h3 class="section-title">Special Offer</h3>
           <div class="sidebar-widget-body outer-top-xs">
             <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
-              
+
 
 
               <div class="item">
@@ -44,18 +45,18 @@ Home Easy Online Shop
           <div class="product-image">
             <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"> <img src="{{ asset($product->product_thambnail) }}" alt=""> </a> </div>
             <!-- /.image --> 
-
+            
           </div>
           <!-- /.product-image --> 
         </div>
         <!-- /.col -->
         <div class="col col-xs-7">
           <div class="product-info">
-            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif</a></h3>
+            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
             <div class="rating rateit-small"></div>
  <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span> </div>
             <!-- /.product-price --> 
-
+            
           </div>
         </div>
         <!-- /.col --> 
@@ -63,16 +64,17 @@ Home Easy Online Shop
       <!-- /.product-micro-row --> 
     </div>
     <!-- /.product-micro --> 
-
+    
   </div>
                   @endforeach <!-- // end special offer foreach -->
 
 
 
 
-
+                  
                 </div>
               </div>
+
 
 
 
@@ -91,15 +93,9 @@ Home Easy Online Shop
 
 
 
-        <!-- ======================================= PRODUCT TAGS ========================== -->
-
-        @include('frontend.common.product_tags')
-
-
-
-
-        <!-- ==================================== PRODUCT TAGS : END ============================ --> 
-
+        <!-- ===== ===== PRODUCT TAGS ==== ====== -->
+   @include('frontend.common.product_tags')
+        <!-- ==== ===== PRODUCT TAGS : END ======= ==== --> 
 
 
 
@@ -110,7 +106,7 @@ Home Easy Online Shop
           <h3 class="section-title">Special Deals</h3>
           <div class="sidebar-widget-body outer-top-xs">
             <div class="owl-carousel sidebar-carousel special-offer custom-carousel owl-theme outer-top-xs">
-              
+
 
               <div class="item">
                 <div class="products special-product">
@@ -123,18 +119,18 @@ Home Easy Online Shop
               <div class="product-image">
                 <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"> <img src="{{ asset($product->product_thambnail) }}"  alt=""> </a> </div>
                 <!-- /.image --> 
-
+                
               </div>
               <!-- /.product-image --> 
             </div>
             <!-- /.col -->
             <div class="col col-xs-7">
               <div class="product-info">
-                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif</a></h3>
+                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
                 <div class="rating rateit-small"></div>
                 <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span> </div>
                 <!-- /.product-price --> 
-
+                
               </div>
             </div>
             <!-- /.col --> 
@@ -142,15 +138,16 @@ Home Easy Online Shop
           <!-- /.product-micro-row --> 
         </div>
         <!-- /.product-micro --> 
-
+        
       </div>
       @endforeach <!-- // end special deals foreach -->
 
 
 
-
+              
                 </div>
               </div>
+
 
 
             </div>
@@ -177,15 +174,10 @@ Home Easy Online Shop
         <!-- /.sidebar-widget --> 
         <!-- ============================================== NEWSLETTER: END ============================================== --> 
         
-
-
-        <!-- ======================= Testimonials============================= -->
-
-        @include('frontend.common.testimonials')
+        <!-- == ==== Testimonials=== ===== -->
+         @include('frontend.common.testimonials')
         
-        <!-- ============================ Testimonials: END =========================== -->
-
-
+        <!-- === ======== Testimonials: END ==== =========== -->
         
         <div class="home-banner"> <img src="{{ asset('frontend/assets/images/banners/LHS-banner.jpg') }}" alt="Image"> </div>
       </div>
@@ -194,6 +186,10 @@ Home Easy Online Shop
       
       <!-- ============================================== CONTENT ============================================== -->
       <div class="col-xs-12 col-sm-12 col-md-9 homebanner-holder"> 
+
+
+
+
         <!-- === ========= SECTION – HERO ==== ======= -->
         
         <div id="hero">
@@ -221,6 +217,15 @@ Home Easy Online Shop
         </div>
         
         <!-- ==== ===== SECTION – HERO : END === ============== --> 
+
+
+
+
+
+
+
+
+
         
         <!-- ============================================== INFO BOXES ============================================== -->
         <div class="info-boxes wow fadeInUp">
@@ -269,7 +274,16 @@ Home Easy Online Shop
         </div>
         <!-- /.info-boxes --> 
         <!-- ============================================== INFO BOXES : END ============================================== --> 
+
+
+
+
+
+
+
+
         <!-- = ===== SCROLL TABS =============== ========== -->
+
         <div id="product-tabs-slider" class="scroll-tabs outer-top-vs wow fadeInUp">
           <div class="more-info-tab clearfix ">
             <h3 class="new-product-title pull-left">New Products</h3>
@@ -281,41 +295,31 @@ Home Easy Online Shop
               @endforeach
               <!-- <li><a data-transition-type="backSlide" href="#laptop" data-toggle="tab">Electronics</a></li>
 
-    
-          
-            
-    
-
-          
-          
-            
-    
-
-          
-    
-  
               <li><a data-transition-type="backSlide" href="#apple" data-toggle="tab">Shoes</a></li> -->
             </ul>
             <!-- /.nav-tabs --> 
           </div>
           <div class="tab-content outer-top-xs">
+
+
+
             <div class="tab-pane in active" id="all">
               <div class="product-slider">
                 <div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
+
                   @foreach($products as $product)
                   <div class="item item-carousel">
                     <div class="products">
                       <div class="product">
                         <div class="product-image">
-     <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
+       <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
                           <!-- /.image -->
-                          
-                          
+
         @php
         $amount = $product->selling_price - $product->discount_price;
         $discount = ($amount/$product->selling_price) * 100;
         @endphp                  
-
+                          
           <div>
             @if ($product->discount_price == NULL)
             <div class="tag new"><span>new</span></div>
@@ -329,17 +333,18 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-            @if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
-                        </a></h3>
-                        <div class="rating rateit-small"></div>
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+            </a></h3>
+          <div class="rating rateit-small"></div>
           <div class="description"></div>
-          
+
          @if ($product->discount_price == NULL)
-         <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
-              @else
-      <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
-              @endif
-     
+    <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
+         @else
+ <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
+         @endif
+
+         
           <!-- /.product-price --> 
           
         </div>
@@ -348,10 +353,17 @@ Home Easy Online Shop
           <div class="action">
             <ul class="list-unstyled">
               <li class="add-cart-button btn-group">
-                <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-              </li>
-              <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+
+
+           <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
+        
+        <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+      </li>
+
+      
+
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
               <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
             </ul>
           </div>
@@ -366,6 +378,8 @@ Home Easy Online Shop
                   </div>
                   <!-- /.item -->
                   @endforeach<!--  // end all optionproduct foreach  -->
+
+
                   
                   
                 </div>
@@ -377,6 +391,7 @@ Home Easy Online Shop
 
 
 
+
             @foreach($categories as $category)
             <div class="tab-pane" id="category{{ $category->id }}">
               <div class="product-slider">
@@ -385,7 +400,7 @@ Home Easy Online Shop
 @php
   $catwiseProduct = App\Models\Product::where('category_id',$category->id)->orderBy('id','DESC')->get(); 
 @endphp
-
+                  
 
                   @forelse($catwiseProduct as $product)
                   <div class="item item-carousel">
@@ -394,13 +409,12 @@ Home Easy Online Shop
                         <div class="product-image">
                           <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
                           <!-- /.image -->
-                          
-                          
+
         @php
         $amount = $product->selling_price - $product->discount_price;
         $discount = ($amount/$product->selling_price) * 100;
         @endphp                  
-
+                          
           <div>
             @if ($product->discount_price == NULL)
             <div class="tag new"><span>new</span></div>
@@ -414,17 +428,18 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-            @if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
-                        </a></h3>
-                        <div class="rating rateit-small"></div>
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+            </a></h3>
+          <div class="rating rateit-small"></div>
           <div class="description"></div>
-          
+
          @if ($product->discount_price == NULL)
-         <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
-              @else
-      <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
-              @endif
-     
+    <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
+         @else
+ <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
+         @endif
+
+         
           <!-- /.product-price --> 
           
         </div>
@@ -433,10 +448,17 @@ Home Easy Online Shop
           <div class="action">
             <ul class="list-unstyled">
               <li class="add-cart-button btn-group">
-                <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-              </li>
-              <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+
+        <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
+        
+        <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+      </li>
+
+      
+
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
+
               <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
             </ul>
           </div>
@@ -457,8 +479,8 @@ Home Easy Online Shop
                   @endforelse<!--  // end all optionproduct foreach  -->
 
 
-
-
+                  
+                  
                 </div>
                 <!-- /.home-owl-carousel --> 
               </div>
@@ -468,25 +490,11 @@ Home Easy Online Shop
             @endforeach <!-- end categor foreach -->
 
 
-
-
-
-
-
-
-
+ 
+            
+            
           </div>
           <!-- /.tab-content --> 
-
-    
-          
-            
-    
-
-          
-    
-    
-  
         </div>
         <!-- /.scroll-tabs --> 
         <!-- ============================================== SCROLL TABS : END ============================================== --> 
@@ -513,15 +521,16 @@ Home Easy Online Shop
         <!-- /.wide-banners --> 
         
         <!-- ============================================== WIDE PRODUCTS : END ============================================== --> 
+        
 
 
 
+        <!-- == === FEATURED PRODUCTS == ==== -->
 
-        <!-- ============================ FEATURED PRODUCTS ======================= -->
         <section class="section featured-product wow fadeInUp">
           <h3 class="section-title">Featured products</h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
-          
+
 
             @foreach($featured as $product)
             <div class="item item-carousel">
@@ -535,7 +544,7 @@ Home Easy Online Shop
         $amount = $product->selling_price - $product->discount_price;
         $discount = ($amount/$product->selling_price) * 100;
         @endphp                  
-
+                          
           <div>
             @if ($product->discount_price == NULL)
             <div class="tag new"><span>new</span></div>
@@ -546,10 +555,10 @@ Home Easy Online Shop
                          </div>
 
                         <!-- /.product-image -->
-
+                        
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -560,25 +569,26 @@ Home Easy Online Shop
  <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
          @endif
 
-
+         
           <!-- /.product-price --> 
-
+          
         </div>
         <!-- /.product-info -->
-        <div class="cart clearfix animate-effect">
+<div class="cart clearfix animate-effect">
   <div class="action">
     <ul class="list-unstyled">
       <li class="add-cart-button btn-group">
-
+       
         <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
-
+        
         <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
       </li>
+
       
 
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
 
-      <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
-
+      
 
       <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
     </ul>
@@ -588,21 +598,19 @@ Home Easy Online Shop
         <!-- /.cart --> 
                       </div>
                       <!-- /.product --> 
-
+                      
                     </div>
                     <!-- /.products --> 
                   </div>
             <!-- /.item -->
             @endforeach
-
+            
+           
           </div>
           <!-- /.home-owl-carousel --> 
         </section>
         <!-- /.section --> 
-        <!-- ========================== FEATURED PRODUCTS : END ======================= --> 
-
-
-
+        <!-- == ==== FEATURED PRODUCTS : END ==== === --> 
 
 
 
@@ -612,7 +620,7 @@ Home Easy Online Shop
 
         <section class="section featured-product wow fadeInUp">
           <h3 class="section-title">
-@if(session()->get('language') == 'arabic') {{ $skip_category_0->category_name_ar }} @else {{ $skip_category_0->category_name_en }} @endif
+@if(session()->get('language') == 'hindi') {{ $skip_category_0->category_name_hin }} @else {{ $skip_category_0->category_name_en }} @endif
             </h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -629,7 +637,7 @@ Home Easy Online Shop
         $amount = $product->selling_price - $product->discount_price;
         $discount = ($amount/$product->selling_price) * 100;
         @endphp                  
-
+                          
           <div>
             @if ($product->discount_price == NULL)
             <div class="tag new"><span>new</span></div>
@@ -640,10 +648,10 @@ Home Easy Online Shop
                          </div>
 
                         <!-- /.product-image -->
-
+                        
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -654,19 +662,27 @@ Home Easy Online Shop
  <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
          @endif
 
-
+         
           <!-- /.product-price --> 
-
+          
         </div>
         <!-- /.product-info -->
         <div class="cart clearfix animate-effect">
           <div class="action">
             <ul class="list-unstyled">
               <li class="add-cart-button btn-group">
-                <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
-                <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
-              </li>
-              <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
+
+
+          <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
+        
+        <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
+      </li>
+
+      
+
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
+
               <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
             </ul>
           </div>
@@ -675,14 +691,14 @@ Home Easy Online Shop
         <!-- /.cart --> 
                       </div>
                       <!-- /.product --> 
-
+                      
                     </div>
                     <!-- /.products --> 
                   </div>
             <!-- /.item -->
             @endforeach
-
-
+            
+           
           </div>
           <!-- /.home-owl-carousel --> 
         </section>
@@ -693,86 +709,97 @@ Home Easy Online Shop
 
 
 
+
+
+
 <!-- == === skip_product_1 PRODUCTS == ==== -->
 
-<section class="section featured-product wow fadeInUp">
-  <h3 class="section-title">
-@if(session()->get('language') == 'arabic') {{ $skip_category_1->category_name_ar }} @else {{ $skip_category_1->category_name_en }} @endif
-    </h3>
-  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
+        <section class="section featured-product wow fadeInUp">
+          <h3 class="section-title">
+@if(session()->get('language') == 'hindi') {{ $skip_category_1->category_name_hin }} @else {{ $skip_category_1->category_name_en }} @endif
+            </h3>
+          <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
 
-    @foreach($skip_product_1 as $product)
-    <div class="item item-carousel">
-            <div class="products">
-              <div class="product">
-                <div class="product-image">
-                  <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
-                  <!-- /.image -->
+            @foreach($skip_product_1 as $product)
+            <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
+                          <!-- /.image -->
 
-@php
-$amount = $product->selling_price - $product->discount_price;
-$discount = ($amount/$product->selling_price) * 100;
-@endphp                  
+        @php
+        $amount = $product->selling_price - $product->discount_price;
+        $discount = ($amount/$product->selling_price) * 100;
+        @endphp                  
+                          
+          <div>
+            @if ($product->discount_price == NULL)
+            <div class="tag new"><span>new</span></div>
+            @else
+            <div class="tag hot"><span>{{ round($discount) }}%</span></div>
+            @endif
+          </div>
+                         </div>
 
-  <div>
-    @if ($product->discount_price == NULL)
-    <div class="tag new"><span>new</span></div>
-    @else
-    <div class="tag hot"><span>{{ round($discount) }}%</span></div>
-    @endif
-  </div>
-                 </div>
+                        <!-- /.product-image -->
+                        
+        <div class="product-info text-left">
+          <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+            </a></h3>
+          <div class="rating rateit-small"></div>
+          <div class="description"></div>
 
-                <!-- /.product-image -->
+         @if ($product->discount_price == NULL)
+    <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
+         @else
+ <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
+         @endif
 
-<div class="product-info text-left">
-  <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
-    </a></h3>
-  <div class="rating rateit-small"></div>
-  <div class="description"></div>
-
- @if ($product->discount_price == NULL)
-<div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
- @else
-<div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
- @endif
+         
+          <!-- /.product-price --> 
+          
+        </div>
+        <!-- /.product-info -->
+        <div class="cart clearfix animate-effect">
+          <div class="action">
+            <ul class="list-unstyled">
+              <li class="add-cart-button btn-group">
 
 
-  <!-- /.product-price --> 
-
-</div>
-<!-- /.product-info -->
-<div class="cart clearfix animate-effect">
-  <div class="action">
-    <ul class="list-unstyled">
-      <li class="add-cart-button btn-group">
-        <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
+           <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
+        
         <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
       </li>
-      <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-      <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-    </ul>
-  </div>
-  <!-- /.action --> 
-</div>
-<!-- /.cart --> 
-              </div>
-              <!-- /.product --> 
 
-            </div>
-            <!-- /.products --> 
+      
+
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
+
+              <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+            </ul>
           </div>
-    <!-- /.item -->
-    @endforeach
-
-
-  </div>
-  <!-- /.home-owl-carousel --> 
-</section>
-<!-- /.section --> 
-<!-- == ==== skip_product_1 PRODUCTS : END ==== === -->
+          <!-- /.action --> 
+        </div>
+        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+            <!-- /.item -->
+            @endforeach
+            
+           
+          </div>
+          <!-- /.home-owl-carousel --> 
+        </section>
+        <!-- /.section --> 
+        <!-- == ==== skip_product_1 PRODUCTS : END ==== === -->
 
 
 
@@ -813,7 +840,7 @@ $discount = ($amount/$product->selling_price) * 100;
           <!-- /.row --> 
         </div>
         <!-- /.wide-banners --> 
-        <!-- =============================== WIDE PRODUCTS : END ================================== --> 
+        <!-- == ===== WIDE PRODUCTS : END ====== ====== --> 
 
 
 
@@ -822,84 +849,94 @@ $discount = ($amount/$product->selling_price) * 100;
 
 <!-- == === skip_brand_product_1 PRODUCTS == ==== -->
 
-<section class="section featured-product wow fadeInUp">
-  <h3 class="section-title">
-@if(session()->get('language') == 'arabic') {{ $skip_brand_1->brand_name_ar }} @else {{ $skip_brand_1->brand_name_en }} @endif
-    </h3>
-  <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
+        <section class="section featured-product wow fadeInUp">
+          <h3 class="section-title">
+@if(session()->get('language') == 'hindi') {{ $skip_brand_1->brand_name_hin }} @else {{ $skip_brand_1->brand_name_en }} @endif
+            </h3>
+          <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
 
-    @foreach($skip_brand_product_1 as $product)
-    <div class="item item-carousel">
-            <div class="products">
-              <div class="product">
-                <div class="product-image">
-                  <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
-                  <!-- /.image -->
+            @foreach($skip_brand_product_1 as $product)
+            <div class="item item-carousel">
+                    <div class="products">
+                      <div class="product">
+                        <div class="product-image">
+                          <div class="image"> <a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}"><img  src="{{ asset($product->product_thambnail) }}" alt=""></a> </div>
+                          <!-- /.image -->
 
-@php
-$amount = $product->selling_price - $product->discount_price;
-$discount = ($amount/$product->selling_price) * 100;
-@endphp                  
+        @php
+        $amount = $product->selling_price - $product->discount_price;
+        $discount = ($amount/$product->selling_price) * 100;
+        @endphp                  
+                          
+          <div>
+            @if ($product->discount_price == NULL)
+            <div class="tag new"><span>new</span></div>
+            @else
+            <div class="tag hot"><span>{{ round($discount) }}%</span></div>
+            @endif
+          </div>
+                         </div>
 
-  <div>
-    @if ($product->discount_price == NULL)
-    <div class="tag new"><span>new</span></div>
-    @else
-    <div class="tag hot"><span>{{ round($discount) }}%</span></div>
-    @endif
-  </div>
-                 </div>
+                        <!-- /.product-image -->
+                        
+        <div class="product-info text-left">
+          <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
+@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+            </a></h3>
+          <div class="rating rateit-small"></div>
+          <div class="description"></div>
 
-                <!-- /.product-image -->
+         @if ($product->discount_price == NULL)
+    <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
+         @else
+ <div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
+         @endif
 
-<div class="product-info text-left">
-  <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
-    </a></h3>
-  <div class="rating rateit-small"></div>
-  <div class="description"></div>
-
- @if ($product->discount_price == NULL)
-<div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span>  </div>
- @else
-<div class="product-price"> <span class="price"> ${{ $product->discount_price }} </span> <span class="price-before-discount">$ {{ $product->selling_price }}</span> </div>
- @endif
-
-
-  <!-- /.product-price --> 
-
-</div>
-<!-- /.product-info -->
-<div class="cart clearfix animate-effect">
-  <div class="action">
-    <ul class="list-unstyled">
-      <li class="add-cart-button btn-group">
-        <button data-toggle="tooltip" class="btn btn-primary icon" type="button" title="Add Cart"> <i class="fa fa-shopping-cart"></i> </button>
+         
+          <!-- /.product-price --> 
+          
+        </div>
+        <!-- /.product-info -->
+        <div class="cart clearfix animate-effect">
+          <div class="action">
+            <ul class="list-unstyled">
+              <li class="add-cart-button btn-group">
+                
+               <button class="btn btn-primary icon" type="button" title="Add Cart" data-toggle="modal" data-target="#exampleModal" id="{{ $product->id }}" onclick="productView(this.id)"> <i class="fa fa-shopping-cart"></i> </button>
+        
         <button class="btn btn-primary cart-btn" type="button">Add to cart</button>
       </li>
-      <li class="lnk wishlist"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Wishlist"> <i class="icon fa fa-heart"></i> </a> </li>
-      <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
-    </ul>
-  </div>
-  <!-- /.action --> 
-</div>
-<!-- /.cart --> 
-              </div>
-              <!-- /.product --> 
 
-            </div>
-            <!-- /.products --> 
+      
+
+        <button class="btn btn-primary icon" type="button" title="Wishlist" id="{{ $product->id }}" onclick="addToWishList(this.id)"> <i class="fa fa-heart"></i> </button>
+
+              <li class="lnk"> <a data-toggle="tooltip" class="add-to-cart" href="detail.html" title="Compare"> <i class="fa fa-signal" aria-hidden="true"></i> </a> </li>
+            </ul>
           </div>
-    <!-- /.item -->
-    @endforeach
+          <!-- /.action --> 
+        </div>
+        <!-- /.cart --> 
+                      </div>
+                      <!-- /.product --> 
+                      
+                    </div>
+                    <!-- /.products --> 
+                  </div>
+            <!-- /.item -->
+            @endforeach
+            
+           
+          </div>
+          <!-- /.home-owl-carousel --> 
+        </section>
+        <!-- /.section --> 
+        <!-- == ==== skip_brand_product_1 PRODUCTS : END ==== === -->
 
 
-  </div>
-  <!-- /.home-owl-carousel --> 
-</section>
-<!-- /.section --> 
-<!-- == ==== skip_brand_product_1 PRODUCTS : END ==== === -->
+
+
 
 
 
@@ -1167,7 +1204,7 @@ $discount = ($amount/$product->selling_price) * 100;
           <h3 class="section-title">latest form blog</h3>
           <div class="blog-slider-container outer-top-xs">
             <div class="owl-carousel blog-slider custom-carousel">
-
+              
 
   @foreach($blogpost as $blog)
               <div class="item">
@@ -1176,26 +1213,26 @@ $discount = ($amount/$product->selling_price) * 100;
                     <div class="image"> <a href="blog.html"><img src="{{ asset($blog->post_image) }}" alt=""></a> </div>
                   </div>
                   <!-- /.blog-post-image -->
-
+                  
                   <div class="blog-post-info text-left">
-                    <h3 class="name"><a href="#">@if(session()->get('language') == 'arabic') {{ $blog->post_title_ar }} @else {{ $blog->post_title_en }} @endif</a></h3>
+                    <h3 class="name"><a href="#">@if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h3>
 
 
                     <span class="info">{{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
 
-                    <p class="text">@if(session()->get('language') == 'arabic') {!! Str::limit($blog->post_details_ar, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
+                    <p class="text">@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
 
 
                     <a href="{{ route('post.details',$blog->id) }}" class="lnk btn btn-primary">Read more</a> </div>
                   <!-- /.blog-post-info --> 
-
+                  
                 </div>
                 <!-- /.blog-post --> 
               </div>
               <!-- /.item -->
           @endforeach 
-
-
+             
+              
             </div>
             <!-- /.owl-carousel --> 
           </div>
@@ -1471,11 +1508,13 @@ $discount = ($amount/$product->selling_price) * 100;
     </div>
     <!-- /.row --> 
     <!-- ============================================== BRANDS CAROUSEL ============================================== -->
-  @include('frontend.body.brand')
+  @include('frontend.body.brands')
     <!-- /.logo-slider --> 
     <!-- ============================================== BRANDS CAROUSEL : END ============================================== --> 
   </div>
   <!-- /.container --> 
 </div>
 <!-- /#top-banner-and-menu --> 
+
+
 @endsection
