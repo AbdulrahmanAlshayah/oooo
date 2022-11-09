@@ -52,7 +52,7 @@ Home Easy Online Shop
         <!-- /.col -->
         <div class="col col-xs-7">
           <div class="product-info">
-            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
+            <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif</a></h3>
             <div class="rating rateit-small"></div>
  <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span> </div>
             <!-- /.product-price --> 
@@ -126,7 +126,7 @@ Home Easy Online Shop
             <!-- /.col -->
             <div class="col col-xs-7">
               <div class="product-info">
-                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif</a></h3>
+                <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif</a></h3>
                 <div class="rating rateit-small"></div>
                 <div class="product-price"> <span class="price"> ${{ $product->selling_price }} </span> </div>
                 <!-- /.product-price --> 
@@ -333,7 +333,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -428,7 +428,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -558,7 +558,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -620,7 +620,7 @@ Home Easy Online Shop
 
         <section class="section featured-product wow fadeInUp">
           <h3 class="section-title">
-@if(session()->get('language') == 'hindi') {{ $skip_category_0->category_name_hin }} @else {{ $skip_category_0->category_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $skip_category_0->category_name_ar }} @else {{ $skip_category_0->category_name_en }} @endif
             </h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -651,7 +651,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -716,7 +716,7 @@ Home Easy Online Shop
 
         <section class="section featured-product wow fadeInUp">
           <h3 class="section-title">
-@if(session()->get('language') == 'hindi') {{ $skip_category_1->category_name_hin }} @else {{ $skip_category_1->category_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $skip_category_1->category_name_ar }} @else {{ $skip_category_1->category_name_en }} @endif
             </h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -747,7 +747,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -851,7 +851,7 @@ Home Easy Online Shop
 
         <section class="section featured-product wow fadeInUp">
           <h3 class="section-title">
-@if(session()->get('language') == 'hindi') {{ $skip_brand_1->brand_name_hin }} @else {{ $skip_brand_1->brand_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $skip_brand_1->brand_name_ar }} @else {{ $skip_brand_1->brand_name_en }} @endif
             </h3>
           <div class="owl-carousel home-owl-carousel custom-carousel owl-theme outer-top-xs">
 
@@ -882,7 +882,7 @@ Home Easy Online Shop
                         
         <div class="product-info text-left">
           <h3 class="name"><a href="{{ url('product/details/'.$product->id.'/'.$product->product_slug_en ) }}">
-@if(session()->get('language') == 'hindi') {{ $product->product_name_hin }} @else {{ $product->product_name_en }} @endif
+@if(session()->get('language') == 'arabic') {{ $product->product_name_ar }} @else {{ $product->product_name_en }} @endif
             </a></h3>
           <div class="rating rateit-small"></div>
           <div class="description"></div>
@@ -1215,12 +1215,12 @@ Home Easy Online Shop
                   <!-- /.blog-post-image -->
                   
                   <div class="blog-post-info text-left">
-                    <h3 class="name"><a href="#">@if(session()->get('language') == 'hindi') {{ $blog->post_title_hin }} @else {{ $blog->post_title_en }} @endif</a></h3>
+                    <h3 class="name"><a href="#">@if(session()->get('language') == 'arabic') {{ $blog->post_title_ar }} @else {{ $blog->post_title_en }} @endif</a></h3>
 
 
                     <span class="info">{{ Carbon\Carbon::parse($blog->created_at)->diffForHumans()  }}</span>
 
-                    <p class="text">@if(session()->get('language') == 'hindi') {!! Str::limit($blog->post_details_hin, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
+                    <p class="text">@if(session()->get('language') == 'arabic') {!! Str::limit($blog->post_details_ar, 100 )  !!} @else {!! Str::limit($blog->post_details_en, 100 )  !!} @endif</p>
 
 
                     <a href="{{ route('post.details',$blog->id) }}" class="lnk btn btn-primary">Read more</a> </div>
