@@ -16,6 +16,9 @@ use App\Models\Brand;
 use Illuminate\Support\Facades\Hash;
 use App\Models\BlogPost;
 
+use App\Models\SubCategory;
+use App\Models\SubSubCategory;
+
 
 class IndexController extends Controller
 {
@@ -150,8 +153,10 @@ class IndexController extends Controller
     public function SubCatWiseProduct($subcat_id,$slug){
         $products = Product::where('status',1)->where('subcategory_id',$subcat_id)->orderBy('id','DESC')->paginate(6);
         $categories = Category::orderBy('category_name_en','ASC')->get();
-        return view('frontend.product.subcategory_view',compact('products','categories'));
+       
+		$breadsubcat = SubCategory::with(['category'])->where('id',$subcat_id)->get();
 
+		return view('frontend.product.subcategory_view',compact('products','categories','breadsubcat'));
     }
 
 
@@ -159,7 +164,10 @@ class IndexController extends Controller
     public function SubSubCatWiseProduct($subsubcat_id,$slug){
         $products = Product::where('status',1)->where('subsubcategory_id',$subsubcat_id)->orderBy('id','DESC')->paginate(6);
         $categories = Category::orderBy('category_name_en','ASC')->get();
-        return view('frontend.product.sub_subcategory_view',compact('products','categories'));
+        
+		$breadsubsubcat = SubSubCategory::with(['category','subcategory'])->where('id',$subsubcat_id)->get();
+
+		return view('frontend.product.sub_subcategory_view',compact('products','categories','breadsubsubcat'));
 
     }
 
