@@ -348,7 +348,7 @@ $("body").on("keyup", "#search", function(){
 
         },
         success:function(result){
-
+            $("#searchProducts").html(result);
         }
 
     }); // end ajax 
