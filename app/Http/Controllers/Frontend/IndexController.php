@@ -12,6 +12,7 @@ use App\Models\Product;
 use App\Models\MultiImg;
 use App\Models\Brand;
 
+
 use Illuminate\Support\Facades\Hash;
 use App\Models\BlogPost;
 
@@ -181,7 +182,15 @@ class IndexController extends Controller
 
 } // end method 
 
+ // Product Seach 
+    public function ProductSearch(Request $request){
+        $item = $request->search;
+        // echo "$item";
+        $categories = Category::orderBy('category_name_en','ASC')->get();
+        $products = Product::where('product_name_en','LIKE',"%$item%")->get();
+        return view('frontend.product.search',compact('products','categories'));
 
+    }
 
 
 

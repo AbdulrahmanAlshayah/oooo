@@ -539,3 +539,6 @@ Route::prefix('adminuserrole')->group(function(){
     Route::get('/delete/{id}', [AdminUserController::class, 'DeleteAdminRole'])->name('delete.admin.user');
     
     });
+
+/// Product Search Route 
+Route::post('/search', [IndexController::class, 'ProductSearch'])->name('product.search');
